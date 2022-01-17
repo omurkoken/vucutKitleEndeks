@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        //boy kiloya göre vücut kitle endeksi hesaplama
+        double kilo,boy;
+
+        Scanner veri=new Scanner(System.in);
+
+        //kullanıcıdan verileri alıyoruz.
+        System.out.print("Lütfen Boyunuzu metre olarak giriniz ");
+        boy=veri.nextDouble();
+
+        System.out.print("lütfen kilonuzu giriniz ");
+        kilo=veri.nextDouble();
+
+        // hesaplamaları yapıyoruz.
+
+        double endeks= (kilo/(boy*boy));
+        System.out.println("vücut kitle endeksiniz "+ endeks);
+
+        //bildiklerimizi unutmayalım, kullanıcıya küçük bir mesaj verelim :)
+        String durum= (endeks>=40)? "o son lokmayı yemeyecektin":"boyle muhtesem görünmeyi nasıl başarıyorsun";
+        System.out.println(durum);
+    }
+}
